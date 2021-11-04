@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Lexend+Deca:wght@200&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.sidebar {
+  height: auto;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  bottom: 0;
+  background: #f5f7fa;
+  overflow-y: scroll;
+  bottom: 0;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+.logo{
+  padding: 5px 5px 5px 10px;
+  width: 210px;
+}
+
+.user {
+  margin: 10px 50px 30px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profile {
+  width: 70px;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+}
+.description {
+  display: inline-block;
+  position: relative;
+  top: 80px;
+}
+.description .name {
+  font-size: 13px;
+  display: block;
+  color: #33526F;
+  letter-spacing: 1.5px;
+  margin-left: 20px;
+}
+
+.dropdown {
+  position: relative;
+  top: 10px;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  display: block; 
+  letter-spacing: 1.5px;
+
+}
+.dropdown:hover {
+  color: black;
+}
+.dropdown i {
+  color: #67C1E0;
+}
+.active {
+  background-color: #b7e2f0;
+  font-weight: 500;
+  color: black;
+}
+
+.dropdown-container {
+  display: none;
+  padding-left: 25px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.dropdown-container a {
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 15px;
+  margin-left: 20px;
+  letter-spacing: 1.5px;
+  color: black;   
+  line-height: 2.4;
+}
+
+.dropdown-container a:hover {
+  color: black; 
+}
+
+.fa-caret-down
+{
+  float: right;
+}
+
+.fas
+{
+  color: #67C1E0; /*Couleur khsk bedliha lamakntch meziana ghaliban mamezianach hhhhhhhh */
+  margin-right: 10px;
+}
+
+.position-des-listes
+{
+  margin-top: 80px;
+}
+.position
+{
+  margin-top: 20px;
+}
+
+.user1
+{
+  margin-right: 16px;
+}
+
+.user2
+{
+  margin-right: 11px;
+}
+
+
+
+/*Section 1 */
+
+.section1{
+  position: relative;
+  margin-top: 0;
+  width: auto;
+  margin-left: 260px;
+  background-image: linear-gradient(#67C1E0, white);
+}
+
+
+
+/******************** Search Widget ****************/
+
+
+#search_widget{ 
+  position: relative;
+  transform: translate(0%, 100%);
+  height: 25px; 
+  border:none;
+  position: relative;
+  margin-left: 70px;
+}
+
+.search-widget{
+  width: 226px;
+}
+
+.searchbtn{
+  border-radius: 400px;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition:0.4s;
+  font-size: 14px;
+  color:black;
+}
+
+.searchtxt{
+  background:none;
+  outline: none;
+  float: left;
+  padding: 0;
+  line-height: 20px;
+  width: 0px;
+  border-left:1px black;
+  border-right:1px black;
+  border-top:1px black;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out; 
+  font-size: 13px;
+  display: block;
+  color: #33526F;
+  letter-spacing: 1.5px;
+}
+
+#search_widget:hover > .searchtxt{
+  width: 200px;
+  padding: 0 6px;
+}
+
+input[type=text]:focus {
+  width: 70%;
+}
+
+
+/****************** Sidebar User ****************/
+
+
+.nav-user{
+  display: flex; 
+  position: relative;
+  margin-left: 1000px;
+  margin-top: -15px ;
+}
+
+.nav-image-user{
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+
+.user-online-name{
+  border-bottom: 2px solid grey;
+  padding: 5px;
+  font-size: 13px;
+  display: block;
+  color: #33526F;
+  letter-spacing: 1.5px;
+}
+
+/****************** Welcome User ****************/
+
+
+.welcome{
+  margin-top: 60px;
+  margin-left: 100px;
+}
+
+.welcome-user{
+  margin-bottom: .5rem;
+  font-size: 30px;
+  color: #33526F;
+  letter-spacing: 1.5px;
+}
+
+.notification{
+  font-size: 15px;
+  color: #33526F;
+  letter-spacing: 1.5px;
+}
+.global{
+  display: flex;
+}
+
+
+/************** header User Show And Hide js **************/
+.action{
+  position : fixed;
+  top: 10px;
+  right: 30px;
+  z-index: 4;
+
+}
+
+
+
+.action .profile{
+  position : relative;
+  width: 45px;
+  height: 45px;
+  border-radius :50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.action .profile img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action .menu .active{
+  opacity: 1;
+  top: 80px;
+}
+
+.hidee{
+  display: none;
+}
+.action .menu {
+  position: absolute;
+  top: 50px;
+  right: -14px;
+  padding: 8px 15px;
+  background: #f5f7fa;
+  width: 150px;
+  box-sizing: content-box;
+  border-radius: 15px;
+  transition: 0.5s;
+  display: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.action .menu h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+  font-size: 17px;
+  color: #33526F;
+  line-height: 1.4em;
+}
+.action .menu h3 span {
+  color: #f5f7fa;
+  margin-top: -27px;
+  transform: rotate(180deg);
+  margin-right: 15px;
+}
+
+.action .menu ul li {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  align-items: left;
+  justify-content: left;
+}
+.action .menu ul li img {
+  max-width: 20px;
+  margin-right: 10px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.action .menu ul li: hover img{
+  opacity: 1;
+}
+.action .menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.5s;
+  font-size: 14px;
+}
+.action .menu ul li:hover a {
+  color: #67C1E0 ;
+}
+
+
+.menu
+{
+  display: none;
+  cursor: pointer;
+}
+
+
+/********* les elements of the page **********/
+
+.etudiants-Tl {
+  border: 3px solid transparent;
+  border-radius: 5px;
+  width: 200px;
+  height: 100px;
+  margin-left: 50px;
+  background-color: #f5f7fa;
+  overflow: hidden;
+  padding-left: 10px;
+  position: absolute; 
+  margin-top: 40px;
+}
+.nv-etudiants{
+  border: 3px solid transparent;
+  border-radius: 5px;
+  width: 200px;
+  height: 100px;
+  margin-left: 300px;
+  background-color: #f5f7fa;
+  overflow: hidden;
+  padding-left: 10px;
+  position: relative;
+  margin-top: 40px;
+}
+.intructeurs{
+  border: 3px solid transparent;
+  border-radius: 5px;
+  width: 200px;
+  height: 100px;
+  margin-left: 35px;
+  background-color: #f5f7fa;
+  overflow: hidden;
+  padding-left: 10px;
+  margin-top: 40px;
+  position: absolute;
+}
+.formations-Tl{
+  border: 3px solid transparent;
+  border-radius: 5px;
+  width: 200px;
+  height: 100px;
+  margin-left: 290px;
+  background-color: #f5f7fa;
+  overflow: hidden;
+  padding-left: 10px;
+  margin-top: 40px;
+  position: relative;
+}
+
+
+.nombre{
+  font-size: 20px;
+  margin-top: 25px;
+  display: block;
+  color: #33526F;
+  letter-spacing: 1.5px;
+  position: relative;
+  margin-left: 150px;
+}
+
+
+.title1 {
+  font-size: 18px;
+  margin-top: -1px;
+  margin-bottom: 10px;
+  color: #33526F;
+  letter-spacing: 1.5px;
+}
+
+#emoji {
+  color:#2596BE;
+  font-size: 28px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.formations-Tl:hover{ 
+  -webkit-transform:scale(1.10);
+}
+.intructeurs:hover {
+  -webkit-transform:scale(1.10);
+}
+
+.nv-etudiants:hover{
+  -webkit-transform:scale(1.10);
+}
+
+.statistiques:hover{
+  -webkit-transform:scale(1.1);
+} 
+
+.etudiants-Tl:hover{
+  -webkit-transform:scale(1.10);
+}
+
+
+
+
+.paragraph h4{
+  font-size: 18px;
+  display: block;
+  color: #33526F;
+  letter-spacing: 2px;
+  margin-left: 80px;
+  margin-top: 30px;
+  line-height: 2.8;
+}
+.paragraph p{
+  font-size: 15px;
+  display: block;
+  color: black;
+  letter-spacing: 1.5px;
+  margin-left: 40px;
+}
+.paragraph i{
+  padding-right: 30px;
+  color: #2596BE;
+}
+
+a {
+  text-decoration: none;
+}
+
+.paragraph p {
+  line-height: 1.8;
+}
+/*FOOTER*/
+footer {
+    height: 23%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 230px;
+}
+
+.collapse
+{
+  display: none;
+}
+
+#maDIV
+{
+  display: none;
+}
+
+
+
+
+
+@media (max-width: 790px)
+{
+  .sidebar{
+    display: none;
+  }
+
+  .collapse_menu
+  {
+    display: block;
+    cursor: pointer;
+
+    width:20px ;
+  }
+  .collapse
+  {
+    padding: 5px;
+    z-index: 10;
+    margin-left: 2%;
+    margin-top: 2%;
+    position: absolute;
+    background-color: #f5f7fa ;
+    border-radius: 6px;
+  }
+
+  .collapse:hover
+  {
+    background-color: #2486c3;
+    border-radius: 6px;
+  }
+
+  .section1
+  {
+    margin-left: 0px;
+  }
+  .welcome {
+    margin-top: 10%;
+    margin-left: 27%;
+  }
+
+  #maDIV {
+    width: 45%;
+    height: 50%;
+    position: absolute;
+    z-index: 10;
+    margin-top: 69px;
+    background-color: #fafbfc;
+    margin-left: 12px;
+    padding: 1px;
+    border-radius: 5px;
+    opacity: 0.99;
+    overflow-y: scroll;
+  }
+
+.dropdown-container a
+  {
+    display: table-header-group;
+  }
+
+
+  .welcome-user {
+    margin-bottom: .5rem;
+    font-size: 30px;
+    color: #33526F;
+    letter-spacing: 1.5px;
+  }
+
+  .global {
+    display: inline-block;
+  }
+
+  .etudiants-Tl, .intructeurs {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    width: 192px;
+    height: 100px;
+    margin-left: 7%;
+    background-color: #f5f7fa;
+    overflow: hidden;
+    padding-left: 10px;
+    position: absolute;
+    margin-top: 0;
+  }
+
+  .nv-etudiants {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    width: 188px;
+    height: 100px;
+    margin-left: 280px;
+    background-color: #f5f7fa;
+    overflow: hidden;
+    padding-left: 10px;
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .formations-Tl {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    width: 188px;
+    height: 100px;
+    margin-left: 281px;
+    background-color: #f5f7fa;
+    overflow: hidden;
+    padding-left: 10px;
+    margin-top: 40px;
+    position: relative;
+  }
+  footer {
+    height: 23%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .hidee {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    width: 77px;
+    margin-left: 15%;
+  }
+
+  #search_widget {
+    position: relative;
+    transform: translate(0%, 100%);
+    height: 25px;
+    border: none;
+    position: relative;
+    margin-left: 35%;
+  }
+
+  .collapse
+  {
+    display: block;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

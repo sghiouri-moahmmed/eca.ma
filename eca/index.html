@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<title>ENSAM CASA - Ecole Nationale Supérieure d'Arts et Métiers</title>
+	<link rel="icon" href="images/academy.jpg"> <!--L'icône--> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body> 
+
+<!--------------------- side bar------------------>
+    <div class="sidebar">
+
+    	<!------- LOGO ENSAM CASA ACADEMY ----->
+
+		<div class="logo">
+			<img src="images/Ensam.png" class="logo">
+		</div>
+
+			<!------- Sidebar USER  ----->
+		<div class="user">
+			<div>
+				<img src="images/face4.jpg" alt="profile_picture" class="profile">
+				<div class="description">
+				<span class="name">User</span>
+			</div>
+		</div>
+</div>
+
+	<!------- the elements of the Sidebar avec des dropdown menu ----->
+			
+	    <div class="position-des-listes">
+
+			<div>
+				<button class="dropdown"> <i class="fas fa-home"></i> Tableau de bord </button>
+			</div>
+			
+			<button class="dropdown"> <i class="fas user1 fa-user-graduate"></i> Étudiants <i class="fa fa-caret-down"></i> </button>
+
+			<div class="dropdown-container">
+			  <a href="ListeEtudiants.html">Tous les étudiants</a>
+			  <a href="EtudiantsDemandeInscription.html">Demande d'inscription</a>
+			  <a href="StudentDemandeCertif.html">Demande de certification</a>
+			</div>
+
+			<button class="dropdown"> <i class="fas fa-graduation-cap"></i> Certifications <i class="fa fa-caret-down"></i> </button>
+
+			<div class="dropdown-container">
+			  <a href="EtudiantInfo.html">Mes certifications</a>
+			 <a href="InstructeurDemande.html">Demande de certification</a>
+			</div>
+
+			<button class="dropdown"> <i class="fas user2 fa-chalkboard-teacher"></i> Sessions <i class="fa fa-caret-down"></i> </button>
+
+			<div class="dropdown-container">
+			  <a href="ListeEtudiantsSession.html">Toutes les sessions <br></a>
+			  <a href="AjouterSession.html">Ajouter une session</a>
+			  <a href="ModifierSession.html">Modifier une session</a>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------- LE BOUTTON QUI AFFICHE LE COLLAPSE MENU ---------->
+
+	<button class="collapse" type="button" onclick="maFonction()">
+		<img class="collapse_menu" src="https://img.icons8.com/material-outlined/48/000000/menu--v1.png"/>
+	</button>
+
+	<div id="maDIV" style="display:none;">
+
+		<div class="position-des-listes">
+
+			<div>
+				<button class="dropdown"> <i class="fas fa-home"></i> Tableau de bord </button>
+			</div>
+			
+			<button class="dropdown"> <i class="fas user1 fa-user-graduate"></i> Étudiants <i class="fa fa-caret-down"></i> </button>
+
+			<div class="dropdown-container">
+			  <a href="ListeEtudiants.html">Tous les étudiants</a>
+			  <a href="EtudiantsDemandeInscription.html">Demande d'inscription</a>
+			  <a href="StudentDemandeCertif.html">Demande de certification</a>
+			</div>
+
+			<button class="dropdown"> <i class="fas fa-graduation-cap"></i> Certifications <i class="fa fa-caret-down"></i> </button>
+
+			<div class="dropdown-container">
+			 <a href="EtudiantInfo.html">Mes certifications</a>
+			 <a href="InstructeurDemande.html">Demande de certification</a>
+			</div>
+
+			<button class="dropdown"> <i class="fas user2 fa-chalkboard-teacher"></i> Sessions <i class="fa fa-caret-down"></i> </button>
+
+			<div class="dropdown-container">
+			  <a href="ListeEtudiantsSession.html">Toutes les sessions</a>
+			  <a href="AjouterSession.html">Ajouter une session</a>
+			  <a href="ModifierSession.html">Modifier une session</a>
+			</div>
+		</div>
+		
+	</div>
+
+<!--------------- LE BOUTTON QUI AFFICHE LE COLLAPSE MENU ---------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div  class="tooltip">
+    	<img class="img1 hidee" src="images/ensam1.png">
+    </div>
+
+<!--------------------- LA PREMIERE SECTION  ------------------->
+
+    <section class="section1">
+
+    	<header>
+
+	<!---------- Search Widget   --------->
+
+			<nav class="navigation-bar-1">
+				<div id="search_widget" class="search-widget">
+   					<a class="searchbtn" href="#"><i class="fa">&#xf002;</i></a>
+   					<input class="searchtxt" type="text" name="" placeholder="Rechercher">    
+				</div>
+
+	<!------- Profile session/ LOGout  ------>
+
+			<div class="action">
+				<div class="profile" onclick="ShowAndHide()">
+					<img src="images/face4.jpg">
+				</div>
+
+	<!---------- Hide and Show js Profile session/ LOGout  --------->
+
+					<div class="menu" id="#menu" >
+						<h3> User Name <span class="fas fa-caret-down"></span> </h3>
+						<ul>
+							<li><img src="images/profile.png"><a href="index.html">Mon profil</a></li>
+							<li><img src="images/logout.png"><a href="login.html">Se déconnecter</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</nav>
+
+<!--------------------- Welcome message  ------------------->
+
+			<div class="welcome">
+				<p class="welcome-user"> Welcome, User! </p>
+				<div class="notification">You have <span class="notification-number"> 19 </span> new notifications</div>
+			</div>
+
+		</header>
+
+<!--------------------- disposition of elements  ---------------->
+
+
+
+
+	<div class="global">
+			<div class="total-et-nv-etudiants">
+			    <div class="etudiants-Tl">
+					<p class="title1" >Total des <br> étudiants</p>
+					<a class="top" href="#"><i class="fas  fa-user-graduate" id="emoji"></i> <span class="nombre"> 324 </span>  </a>
+		        </div>
+		        <div class="nv-etudiants">
+					<p class="title1">Nouveaux <br> étudiants</p>
+					<a class="top" href="#"><i class="fas  fa-user-graduate" id="emoji"></i> <span class="nombre"> 23 </span>  </a>
+				</div>
+			</div>
+			<div class="instruct-formation-Tl">
+				<div class="intructeurs">
+					<p class="title1">Total des instructeurs</p>
+					<a class="top" href="#"><i class="fas fa-chalkboard-teacher" id="emoji"></i> <span class="nombre"> 45 </span>  </a>
+				</div>
+				<div class="formations-Tl">
+					<p class="title1" >Total des formations</p>
+					<a class="top" href="#"><i class="fas fa-graduation-cap" id="emoji"></i> <span class="nombre"> 17 </span>  </a>
+				</div>
+			</div>
+	</div>
+
+
+<!--------------------- Les formations Populaires  ------------------->
+
+		<div class="paragraph">
+			<h4>Les formations les plus demandées</h4>
+			<p>
+	         <i class="fas fa-angle-right"></i>HCIA-AI Course <br>
+	         <i class="fas fa-angle-right"></i>HCIE-Big Data Mining Course <br>
+	         <i class="fas fa-angle-right"></i>HCIA-5G Course </p>
+		</div>
+
+	</section>
+
+	<footer> <!--FOOTER-->
+        <p>Copyright &copy; 2021 All rights reserved</p>
+    </footer>
+    
+
+  <script>
+
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+  });
+
+  searchBtn.addEventListener("click", ()=>{ 
+    sidebar.classList.toggle("open");
+  });
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right")
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu")
+   }
+  }
+  </script>
+  <script type="text/javascript">
+      var dropdown = document.getElementsByClassName("dropdown");
+var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+}
+
+function ShowAndHide ()
+    {
+      var x = document.getElementById("#menu");
+      if (x.style.display === "block") 
+      {
+        x.style.display = "none";
+      }else{
+
+        x.style.display = "block";
+      }
+    }
+
+function maFonction() {
+  var div = document.getElementById("maDIV");
+  if (div.style.display === "none") {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+}
+
+
+</script>
+</body>
+
+
